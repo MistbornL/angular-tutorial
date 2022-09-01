@@ -1,0 +1,17 @@
+<h2>course works!</h2>
+<button (click)="handleClick()">{{ show ? "hide row" : "show row" }}</button>
+<div *ngIf="show" class="row" style="display: flex">
+  <div class="col-2" style="flex: 2">show</div>
+  <div class="col-7" style="flex: 7">b</div>
+  <div class="col-3" style="flex: 3">c</div>
+</div>
+<div>
+  <input [(ngModel)]="name" type="text" />
+  <button (click)="handleAdd()">add</button>
+</div>
+
+<div>
+  <ul>
+    <li *ngFor="let book of books">{{ book }}</li>
+  </ul>
+</div>
