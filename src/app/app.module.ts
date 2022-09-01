@@ -4,12 +4,12 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { CourseComponent } from './course/course.component';
+import { BookComponent } from './book/book.component';
 
-import { CoursesService } from './course/courses.service';
+import { CoursesService } from './book/book.service';
 
 @NgModule({
-  declarations: [AppComponent, CourseComponent],
+  declarations: [AppComponent, BookComponent],
   imports: [BrowserModule, AppRoutingModule, FormsModule],
   providers: [CoursesService],
   bootstrap: [AppComponent],

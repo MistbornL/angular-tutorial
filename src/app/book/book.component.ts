@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from './courses.service';
+import { CoursesService } from './book.service';
 
 @Component({
-  selector: 'app-course',
-  templateUrl: './course.component.html',
-  styleUrls: ['./course.component.scss'],
+  selector: 'app-book',
+  templateUrl: './book.component.html',
+  styleUrls: ['./book.component.scss'],
 })
-export class CourseComponent implements OnInit {
+export class BookComponent implements OnInit {
   title = 'List of courses';
   courses: any;
   show: boolean = false;
