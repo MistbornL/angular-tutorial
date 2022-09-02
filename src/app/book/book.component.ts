@@ -12,6 +12,7 @@ export class BookComponent implements OnInit {
   show: boolean = false;
   name: string = '';
   books: string[] = [];
+
   constructor(service: CoursesService) {
     this.courses = service.getCourses;
     console.log(this.courses);
@@ -28,6 +29,12 @@ export class BookComponent implements OnInit {
   handleAdd(): void {
     this.books.push(this.name);
     this.name = '';
+  }
+
+  handleDelete(e: any): void {
+    if (this.books.includes(e)) {
+      this.books.splice(this.books.indexOf(e), 1);
+    }
   }
 
   ngOnInit(): void {}

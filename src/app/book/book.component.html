@@ -11,7 +11,8 @@
 </div>
 
 <div>
-  <ul>
-    <li *ngFor="let book of books">{{ book }}</li>
+  <ul *ngFor="let book of books" style="display: flex">
+    <li>{{ book }}</li>
+    <button (click)="handleDelete(book)">delete</button>
   </ul>
 </div>
