@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from './book.service';
+import { CoursesService } from './books.service';
 
 @Component({
-  selector: 'app-book',
-  templateUrl: './book.component.html',
-  styleUrls: ['./book.component.scss'],
+  selector: 'app-books',
+  templateUrl: './books.component.html',
+  styleUrls: ['./books.component.scss'],
 })
-export class BookComponent implements OnInit {
+export class BooksComponent implements OnInit {
   title = 'List of courses';
   courses: any;
   show: boolean = false;
@@ -31,9 +31,9 @@ export class BookComponent implements OnInit {
     this.name = '';
   }
 
-  handleDelete(e: any): void {
-    if (this.books.includes(e)) {
-      this.books.splice(this.books.indexOf(e), 1);
+  handleDelete(book: string): void {
+    if (this.books.includes(book)) {
+      this.books.splice(this.books.indexOf(book), 1);
     }
   }
 
