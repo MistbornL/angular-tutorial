@@ -1,0 +1,4 @@
+<ul *ngFor="let book of books" style="display: flex">
+  <li>{{ book }}</li>
+  <button (click)="handleDelete(book)">delete</button>
+</ul>

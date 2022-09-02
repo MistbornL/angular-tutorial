@@ -36,6 +36,5 @@ export class BooksComponent implements OnInit {
       this.books.splice(this.books.indexOf(book), 1);
     }
   }
-
   ngOnInit(): void {}
 }
