@@ -1,5 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
+import { data } from '../models/models';
 
 @Injectable({
   providedIn: 'root',
@@ -9,7 +11,7 @@ export class PostService {
 
   constructor(private httpClient: HttpClient) {}
 
-  getPosts() {
-    return this.httpClient.get(this.url);
+  getPosts(): Observable<data[]> {
+    return this.httpClient.get<data[]>(this.url);
   }
 }

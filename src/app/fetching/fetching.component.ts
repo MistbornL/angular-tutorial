@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { data } from '../models/models';
 import { PostService } from './post.service';
 
 @Component({
@@ -14,7 +15,6 @@ export class FetchingComponent implements OnInit {
   ngOnInit(): void {
     this.service.getPosts().subscribe((response) => {
       this.posts = response;
-      console.log(response);
     });
   }
 }
