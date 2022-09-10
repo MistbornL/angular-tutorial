@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { CoursesService } from './books.service';
 
 @Component({
   selector: 'app-books',
@@ -13,10 +12,7 @@ export class BooksComponent implements OnInit {
   name: string = '';
   books: string[] = [];
 
-  constructor(service: CoursesService) {
-    this.courses = service.getCourses;
-    console.log(this.courses);
-  }
+  constructor() {}
 
   handleClick(): void {
     this.show = !this.show;
@@ -27,8 +23,12 @@ export class BooksComponent implements OnInit {
   }
 
   handleAdd(): void {
-    this.books.push(this.name);
-    this.name = '';
+    if (this.name !== '') {
+      this.books.push(this.name);
+      this.name = '';
+    } else {
+      alert('nununu');
+    }
   }
 
   handleDelete(book: string): void {
